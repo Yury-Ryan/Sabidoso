@@ -3,7 +3,7 @@ const urlsToCache = [
   "./",
   "./index.html",
   "./CSS/style.css",
-  "./icones/icone.png",
+  "./icone/icone.png",
 ];
 
 // Instala o service worker e adiciona os arquivos ao cache
@@ -36,3 +36,4 @@ self.addEventListener("fetch", (event) => {
       .then((response) => response || fetch(event.request))
   );
 });
+
