@@ -2,7 +2,7 @@
   "name": "SabIdoso",
   "short_name": "SabIdoso",
   "description": "Ajuda idosos a usar o celular e aplicativos como WhatsApp.",
-  "start_url": "./index.html",
+  "start_url": "/Sabidoso3/index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
