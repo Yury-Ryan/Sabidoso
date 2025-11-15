@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: Arial, sans-serif;
+
   background-color: #1a1a1a;
   flex-direction: column;
   min-height: 100vh;
@@ -14,30 +14,35 @@ body {
   background-attachment: fixed; /* imagem fixa */
   background-position: center;
 }
-
+body::before {
+  font-family: Arial, sans-serif;
+}
 .container1 {
   opacity: 0;
-  height: 1000px;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: block;
+
+  transition: 1s;
 }
 #titulo {
   align-items: center;
   justify-content: center;
   display: flex;
   margin-top: 20vh;
-  color: #fffdfdc9;
+  color: #000000c9;
   font-size: 5vw;
   width: calc(60vw);
   min-width: 300px;
-  background: linear-gradient(90deg, #000000db, #00000000, #00000000);
-  background-color: rgba(0, 0, 0, 0.847);
-  background-size: 200%;
+  background-color: rgba(178, 178, 178, 0);
+  background: linear-gradient(90deg, #fafafa, #00000050, #00000000);
+
+  background-size: 300%;
   margin-inline: 15vw;
   border-radius: 30vw;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 .subt {
@@ -53,10 +58,10 @@ body {
   gap: calc(42px + 8vw);
   padding: 5vw;
   margin-top: 50vh;
-  background: linear-gradient(135deg, rgb(40, 40, 45), rgb(0, 0, 0));
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(40, 40, 45, 0), rgba(0, 0, 0, 0));
   justify-items: center;
 }
+
 .cell {
   box-shadow: 5px 10px 10px rgb(0, 0, 0);
   background: linear-gradient(135deg, rgba(49, 49, 49, 0), rgb(0, 0, 0));
@@ -78,10 +83,17 @@ body {
   border-top: solid #494949 0.25vw;
   transition: 0.4s;
   user-select: none;
+
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: coarse) {
+  .cell {
+    max-height: 10vh;
+  }
 }
 .cell:hover {
   background-color: #6b6b6b;
@@ -122,7 +134,6 @@ a {
   position: fixed;
   z-index: 1000;
   display: flex;
-  backdrop-filter: blur(20px);
   border-radius: 60px;
   margin-inline: 5vw auto;
   padding-top: 10px;

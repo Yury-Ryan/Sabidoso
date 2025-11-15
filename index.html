@@ -94,13 +94,13 @@
       function começar() {
         setTimeout(() => {
           document.getElementById("titulo").style.cssText =
-            "background-color:#00000000; background-size:300%; background-position: -50vw 0px; color:white";
+            "background-color:#00000000; background-size:300%; background-position: -90vw 0px; color:white";
         }, 100);
         setTimeout(() => {
           document.getElementById("titulo").style.cssText =
-            "background-color:#00000000; background-size:300%; background-position: -50vw 0px; color:white; opacity:0;";
+            "background-color:#00000000; background-size:300%; background-position: -90vw 0px; color:white; opacity:0;";
           document.querySelector(".subt").style.cssText = "color:#00000000;";
-        }, 1000);
+        }, 1200);
         setTimeout(() => {
           document.getElementById("titulo").style.display = "none";
           document.querySelector(".subt").style.display = "none";
@@ -112,9 +112,10 @@
           document.getElementById("principal").style.display = "block ";
         }, 3000);
         setTimeout(() => {
-          document.getElementById("principal").style.cssText = "opacity:1";
+          document.getElementById("principal").style.cssText =
+            "opacity:1; backdrop-filter: blur(10px);";
           document.querySelector("body").style.cssText =
-            "justify-content: flex-start";
+            "justify-content: flex-start;";
         }, 3100);
       }
       //botão de sos
