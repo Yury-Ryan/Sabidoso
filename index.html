@@ -6,23 +6,24 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SabIdoso</title>
-    <link rel="stylesheet" <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/png" href="icones/icone.png" />
+    <link rel="scr" href="" />
     <meta name="theme-color" content="#004466" />
   </head>
 
   <body>
+    <header id="header">
+      <div class="logo">
+        <img src="Imagens/Sabidoso.webp" alt="Logo" />
+      </div>
+    </header>
     <div onclick="começar()" id="titulo">
       <h1>Bem vindo!</h1>
     </div>
-    <h1 class="subt">Toque em qualquer lugar para começar</h1>
+    <div class="subt"><h1>Toque em qualquer lugar para começar</h1></div>
     <div class="container1" id="principal">
-      <header class="cell-header">
-        <div class="logo">
-          <img src="Imagens/Sabidoso.webp" alt="Logo" />
-        </div>
-      </header>
       <div class="container2">
         <div id="whatsapp" class="cell">
           <a href="https://www.google.com/"
@@ -91,72 +92,7 @@
       <button id="voltar" onclick="voltar()">⬅ Voltar</button>
     </div>
 
-    <script>
-      //funcionamento de  interação
-      document.getElementById("principal").style.display = "none";
-
-      setTimeout(() => {
-        document.querySelector(".subt").style.cssText = "color: white";
-      }, 1000);
-      function começar() {
-        setTimeout(() => {
-          document.getElementById("titulo").style.cssText =
-            "background-color:#00000000;  background-size:300%; background-position: -120vw 0px;";
-        }, 100);
-        setTimeout(() => {
-          document.getElementById("titulo").style.cssText =
-            "background-color:#00000000; background-size:300%; background-position: -120vw 0px; color:white ; opacity:0;";
-          document.querySelector(".subt").style.cssText =
-            "color:#00000000;  -webkit-text-stroke: 1px #00000000;";
-        }, 1200);
-        setTimeout(() => {
-          document.getElementById("titulo").style.display = "none";
-          document.querySelector(".subt").style.display = "none";
-        }, 3000);
-        //botão em si^
-
-        //subtitulo
-        setTimeout(() => {
-          document.getElementById("principal").style.display = "block ";
-        }, 3000);
-        setTimeout(() => {
-          document.getElementById("principal").style.cssText =
-            "opacity:1; backdrop-filter: blur(10px);";
-          document.querySelector("body").style.cssText =
-            "justify-content: flex-start;";
-        }, 3100);
-      }
-      //botão de sos
-      function mostrarTelefones() {
-        setTimeout(() => {
-          document.getElementById("principal").style.display = "none";
-        }, 300);
-        setTimeout(() => {
-          document.getElementById("telefones").style.display = "block";
-        }, 300);
-      }
-
-      //botão de voltar
-      function voltar() {
-        setTimeout(() => {
-          document.getElementById("principal").style.display = "block";
-        }, 300);
-        setTimeout(() => {
-          document.getElementById("telefones").style.display = "none";
-        }, 300);
-      }
-
-      //Funcionamento de aplicação
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("service-worker.js")
-            .then(() => console.log("✅ Service Worker registrado!"))
-            .catch((err) =>
-              console.log("❌ Falha ao registrar o Service Worker:", err)
-            );
-        });
-      }
-    </script>
+    <script src="script.js"></script>
+    <script src=""></script>
   </body>
 </html>
