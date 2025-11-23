@@ -1,59 +1,75 @@
-//funcionamento de  interação
+//=========== VERIFICAR SE A INTRO JÁ FOI VISTA =============
 document.getElementById("principal").style.display = "none";
 
-setTimeout(() => {
-  document.querySelector(".subt").style.cssText =
-    "color: white; backdrop-filter: blur(5px); background-color: #00000033;   margin-top: 60px; border-radius: 20px;  -webkit-text-stroke: 1px black;";
-}, 1000);
+if (localStorage.getItem("intro") === "ok") {
+  // pula animação
+  document.getElementById("titulo").style.display = "none";
+  document.querySelector(".subt").style.display = "none";
+  document.getElementById("principal").style.display = "flex";
+  document.querySelector(".container1").style.cssText = "opacity:1;";
+  document.querySelector("#fundo").style.cssText =
+    "filter: blur(2px) grayscale(100%) brightness(0.8);";
+} else {
+  // intro normal
+  setTimeout(() => {
+    document.querySelector(".subt").style.cssText =
+      "color: #0021a7ff; backdrop-filter: blur(20px); border-color: #04398355;     margin-top: 60px; border-radius: 20px;  ";
+  }, 1000);
+}
+
+//========= FUNÇÃO DE COMEÇAR (PRIMEIRA VEZ) =========
 function começar() {
   setTimeout(() => {
     document.getElementById("titulo").style.cssText =
-      "background-color:#00000000;  background-size:300%; background-position: -120vw 0px;";
+      "background-color:#00000000; background-size:300%; background-position: -120vw 0px;";
   }, 100);
+
   setTimeout(() => {
     document.getElementById("titulo").style.cssText =
-      "background-color:#00000000; background-size:300%; background-position: -120vw 0px; color:white ; opacity:0;";
+      "background-color:#00000000; color: #00000000 background-size:300%; background-position: -120vw 0px; color:white; opacity:0;";
     document.querySelector(".subt").style.cssText =
-      "color:#00000000; -webkit-text-stroke: 1px #00000000; margin-top: 60px ;";
+      "color:#00000000; margin-top: 60px ;";
   }, 1200);
+
   setTimeout(() => {
     document.getElementById("titulo").style.display = "none";
     document.querySelector(".subt").style.display = "none";
   }, 3000);
-  //botão em si^
 
-  //outras reações
+  // Liberar tela principal
   setTimeout(() => {
     document.getElementById("principal").style.display = "flex ";
   }, 3000);
 
   setTimeout(() => {
-    document.querySelector(".container1").style.cssText =
-      "opacity:1; backdrop-filter: blur(0px); justify-content: flex-start; backdrop-filter: grayscale(100%) blur(10px) ; ";
+    document.querySelector(".container1").style.cssText = "opacity:1 ; ";
+    document.querySelector("#fundo").style.cssText =
+      "filter: blur(2px) grayscale(100%) brightness(0.8);";
   }, 3100);
-}
-//botão de sos
 
+  //==== SALVANDO QUE A INTRO FOI VISTA =====
+  localStorage.setItem("intro", "ok");
+}
+
+//========= OUTRAS FUNÇÕES ==========
 function mostrarTelefones() {
   setTimeout(() => {
     document.getElementById("principal").style.display = "none";
-  }, 300);
-  setTimeout(() => {
-    document.getElementById("telefones").style.display = "block";
+
+    document.getElementById("SOS").style.display = "block";
   }, 300);
 }
 
-//botão de voltar
 function voltar() {
   setTimeout(() => {
     document.getElementById("principal").style.display = "block";
   }, 300);
   setTimeout(() => {
-    document.getElementById("telefones").style.display = "none";
+    document.getElementById("SOS").style.display = "none";
   }, 300);
 }
 
-//Funcionamento de aplicação
+//========= SERVICE WORKER ===========
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker

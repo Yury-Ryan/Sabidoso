@@ -1,12 +1,5 @@
 const CACHE_NAME = "sabidoso-cache-v1";
-const urlsToCache = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./icone/icone.png",
-  "./script.js",
-  "./noturn.js",
-];
+const urlsToCache = ["./", "./index.html", "./style.css", "./icone/icone.png"];
 
 // Instala o service worker e adiciona os arquivos ao cache
 self.addEventListener("install", (event) => {
