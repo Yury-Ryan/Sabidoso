@@ -24,7 +24,6 @@ body {
   min-height: 100dvh; /* ocupa a altura real da tela */
 
   flex-direction: column;
-  transition: 1s;
 }
 #titulo {
   z-index: 1000;
@@ -111,15 +110,17 @@ body {
 }
 
 .cell {
-  transition: 1s;
-  border: #000 solid;
-
+  outline: #000 solid 4px;
+  border-top: solid #ffffff 5px;
+  border-left: solid #ffffff 5px;
+  border-right: solid #6e6e6e 5px;
+  border-bottom: solid #6e6e6e 5px;
   background: linear-gradient(
     135deg,
-    rgba(153, 255, 137, 0),
-    rgb(163, 163, 163)
+    rgba(255, 255, 255, 0.137),
+    rgba(0, 0, 0, 0)
   );
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(204, 204, 204);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,6 +304,7 @@ body.dark #SOS h1 {
   height: 100%;
   background-size: cover;
   background-position: center;
+  transition: filter 1s;
 }
 
 /* Imagem clara */
@@ -314,7 +316,6 @@ body.dark #SOS h1 {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease;
 }
 
 /* Imagem padrão (modo claro) */
@@ -354,11 +355,15 @@ body.dark header {
 }
 
 body.dark .cell {
-  background: linear-gradient(135deg, rgba(49, 49, 49, 0), rgb(5, 5, 5));
-  background-color: #242424;
-  border: #000 solid;
+  background-color: #000000;
+  border-top: solid #323232 5px;
+  border-left: solid #323232 5px;
+  border-right: solid #000000 5px;
+  border-bottom: solid #000000 5px;
 }
-
+body.dark #uber img {
+  filter: brightness(3);
+}
 body.dark .cell:hover {
   background-color: #444;
 }
