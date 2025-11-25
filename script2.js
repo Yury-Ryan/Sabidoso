@@ -17,7 +17,7 @@ const tutoriais = {
       <ul>
         <li>1. Abrir conversa<img src="ensino/whatsapp/passo.jpg"/ alt="">
 </li>
-        <li>2. Tocar na câmera <img src="ensino/whatsapp/passo2.jpg"/ alt=""></li>
+<li>2. Tocar na câmera <img src="ensino/whatsapp/passo2.jpg"/ alt=""></li>
         <li>3. Aguardar a resposta <img src="ensino/whatsapp/passo3.png"/ alt=""></li>
       </ul>
       <button onclick="voltar()">🔙 Voltar</button>
