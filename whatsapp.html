@@ -18,13 +18,13 @@
   <div id="fundo"></div>
     <div class="conteudo">
       <div class="cell opcao" data-acao="foto">  <div>Mandar fotos ou vídeos</div>
-  <img src="ensino/Whatsapp/image3.png" alt="">
+  <img src="ensino/whatsapp/image3.png" alt="">
 </div>
       <div class="cell opcao" data-acao="videochamada">  <div>Fazer ligação de video</div>
-  <img src="ensino/Whatsapp/image2.png" alt="">
+  <img src="ensino/whatsapp/image2.png" alt="">
 </div>
       <div class="cell opcao" data-acao="voz">  <div>Fazer ligação de voz</div>
-  <img src="ensino/Whatsapp/image.png" alt="">
+  <img src="ensino/whatsapp/image.png" alt="">
 </div>
   </div>
   <div id="tutorial" style="display:none"></div>
@@ -32,5 +32,38 @@
   
   
   <script src="noturn.js"></script>
-<script src="script2.js"></script></body>
+<script src="script2.js"></script><script>
+const tutoriais = {
+
+  foto: {
+    titulo: "📷 Mandar foto no WhatsApp",
+    passos: [
+      "Abrir conversa|ensino/Whatsapp/passo.jpg",
+      "Tocar no clipe|ensino/Whatsapp/passo2v3.jpg",
+      "Escolher Galeria|ensino/Whatsapp/passo3v2.jpg",
+      "Enviar|ensino/Whatsapp/passo4.jpg"
+    ]
+  },
+
+  videochamada: {
+    titulo: "🎥 Fazer chamada de vídeo",
+    passos: [
+      "Abrir conversa|ensino/Whatsapp/passo.jpg",
+      "Tocar na câmera|ensino/Whatsapp/passo2.jpg",
+      "Aguardar resposta|ensino/Whatsapp/passo3.png"
+    ]
+  },
+
+  voz: {
+    titulo: "📞 Fazer ligação de voz",
+    passos: [
+      "Abrir conversa|ensino/Whatsapp/passo.jpg",
+      "Tocar no telefone|ensino/Whatsapp/passo2v2.jpg",
+      "Esperar ligação|ensino/Whatsapp/passo3.png"
+    ]
+  }
+
+};
+</script>
+<script src="global.js"></script></body>
 </html>

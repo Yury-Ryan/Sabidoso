@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body class="fundao theme-pix"> <header id="header">
+      <div class="logo"><a href="index.html">
+        <img src="Imagens/Sabidoso.webp" alt="Logo" /></a>
+      </div>
+              <input id="toggle" type="checkbox"></input> 
+
+      <label for="toggle" class="button"></label>
+    </header>
+<div id="fundo"></div>
+
+<div class="conteudo">
+
+  <div class="cell opcao" data-acao="fazer">
+    <div>Fazer PIX</div>
+    <img src="ensino/pix/image.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="chave">
+    <div>Cadastrar chave</div>
+    <img src="ensino/pix/image2.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="comprovante">
+    <div>Ver comprovante</div>
+    <img src="ensino/pix/image3.png" alt="" />
+  </div>
+
+</div>
+
+<div id="tutorial" style="display: none"></div>
+
+<script>
+  const tutoriais = {
+
+    fazer: {
+      titulo: "💸 Fazer PIX",
+      passos: [
+        "Abrir o app do banco|ensino/Pix/p1.jpg",
+        "Ir em 'PIX'|ensino/Pix/p2.jpg",
+        "Selecionar tipo de envio|ensino/Pix/p3.jpg",
+        "Digitar valor|ensino/Pix/p4.jpg",
+        "Confirmar pagamento|ensino/Pix/p5.jpg",
+      ],
+    },
+
+    chave: {
+      titulo: "🔑 Cadastrar chave PIX",
+      passos: [
+        "Ir em Minhas Chaves|ensino/Pix/c1.jpg",
+        "Escolher tipo de chave|ensino/Pix/c2.jpg",
+        "Registrar chave|ensino/Pix/c3.jpg",
+      ],
+    },
+
+    comprovante: {
+      titulo: "📄 Ver comprovante",
+      passos: [
+        "Ir em Comprovantes|ensino/Pix/v1.jpg",
+        "Selecionar o PIX enviado|ensino/Pix/v2.jpg",
+        "Visualizar ou salvar|ensino/Pix/v3.jpg",
+      ],
+    },
+
+  };
+
+</script>
+
+
+<script src="global.js"></script>
+<script src="noturn.js"></script></body>
+</html>

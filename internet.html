@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style2.css" />
   </head>
 
-  <body class="fundao theme-internet"> <header id="header">
+  <body class="theme-internet"> <header id="header">
       <div class="logo"><a href="index.html">
         <img src="Imagens/Sabidoso.webp" alt="Logo" /></a>
       </div>
@@ -15,22 +15,63 @@
 
       <label for="toggle" class="button"></label>
     </header>
-  <div id="fundo"></div>
-    <div class="conteudo">
-      <div class="cell opcao" data-acao="foto">  <div>Mandar fotos ou vídeos</div>
-  <img src="ensino/Whatsapp/image3.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="videochamada">  <div>Fazer ligação de video</div>
-  <img src="ensino/Whatsapp/image2.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="voz">  <div>Fazer ligação de voz</div>
-  <img src="ensino/Whatsapp/image.png" alt="">
-</div>
-  </div>
-  <div id="tutorial" style="display:none"></div>
+<div id="fundo"></div>
 
-  
-  
-  <script src="noturn.js"></script>
-<script src="script2.js"></script></body>
+<div class="conteudo">
+
+  <div class="cell opcao" data-acao="ligar">
+    <div>Ligar internet</div>
+    <img src="ensino/internet/image.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="trocar">
+    <div>Trocar rede</div>
+    <img src="ensino/internet/image2.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="desligar">
+    <div>Desligar internet</div>
+    <img src="ensino/internet/image3.png" alt="" />
+  </div>
+
+</div>
+
+<div id="tutorial" style="display: none"></div>
+
+<script>
+  const tutoriais = {
+
+    ligar: {
+      titulo: "🌐 Ligar a internet",
+      passos: [
+        "Abrir Configurações|ensino/Internet/i1.jpg",
+        "Ir em Wi-Fi ou Dados móveis|ensino/Internet/i2.jpg",
+        "Ativar|ensino/Internet/i3.jpg",
+      ],
+    },
+
+    trocar: {
+      titulo: "📶 Trocar de rede",
+      passos: [
+        "Abrir Configurações|ensino/Internet/t1.jpg",
+        "Ir em Wi-Fi|ensino/Internet/t2.jpg",
+        "Escolher outra rede|ensino/Internet/t3.jpg",
+      ],
+    },
+
+    desligar: {
+      titulo: "❌ Desligar a internet",
+      passos: [
+        "Abrir Configurações|ensino/Internet/d1.jpg",
+        "Ir em Wi-Fi ou Dados móveis|ensino/Internet/d2.jpg",
+        "Desativar|ensino/Internet/d3.jpg",
+      ],
+    },
+
+  };
+</script>
+
+
+<script src="global.js"></script></body>
+<script src="noturn.js"></script>
 </html>

@@ -1,36 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Facebook</title>
     <link rel="stylesheet" href="style2.css" />
   </head>
 
-  <body class="fundao theme-facebook"> <header id="header">
-      <div class="logo"><a href="index.html">
-        <img src="Imagens/Sabidoso.webp" alt="Logo" /></a>
+  <body class="fundao theme-facebook">
+    <header id="header">
+      <div class="logo">
+        <a href="index.html"> <img src="Imagens/Sabidoso.webp" alt="" /></a>
       </div>
-              <input id="toggle" type="checkbox"></input> 
-
+      <input id="toggle" type="checkbox" />
       <label for="toggle" class="button"></label>
     </header>
-  <div id="fundo"></div>
-    <div class="conteudo">
-      <div class="cell opcao" data-acao="foto">  <div>Mandar fotos ou vídeos</div>
-  <img src="ensino/Whatsapp/image3.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="videochamada">  <div>Fazer ligação de video</div>
-  <img src="ensino/Whatsapp/image2.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="voz">  <div>Fazer ligação de voz</div>
-  <img src="ensino/Whatsapp/image.png" alt="">
-</div>
-  </div>
-  <div id="tutorial" style="display:none"></div>
 
-  
-  
-  <script src="noturn.js"></script>
-<script src="script2.js"></script></body>
+    <div id="fundo"></div>
+
+    <div class="conteudo">
+      <div class="cell opcao" data-acao="publicar">
+        <div>Publicar foto/vídeo</div>
+        <img src="ensino/facebook/image.png" alt="" />
+      </div>
+
+      <div class="cell opcao" data-acao="amigos">
+        <div>Adicionar amigos</div>
+        <img src="ensino/facebook/image2.png" alt="" />
+      </div>
+
+      <div class="cell opcao" data-acao="golpes">
+        <div>Prevenir golpes</div>
+        <img src="ensino/facebook/image3.png" alt="" />
+      </div>
+    </div>
+
+    <div id="tutorial" style="display: none"></div>
+
+    <!-- TUTORIAIS DA PÁGINA (somente dados!) -->
+    <script>
+      const tutoriais = {
+        publicar: {
+          titulo: "📷 Publicar foto ou vídeo",
+          passos: [
+            "Tocar em Criar publicação|ensino/Facebook/p1.jpg",
+            "Escolher a foto|ensino/Facebook/p2.jpg",
+            "Tocar em Publicar|ensino/Facebook/p3.jpg",
+          ],
+        },
+
+        amigos: {
+          titulo: "👤 Adicionar amigos",
+          passos: [
+            "Buscar nome da pessoa|ensino/Facebook/a1.jpg",
+            "Tocar em Adicionar amigo|ensino/Facebook/a2.jpg",
+            "Aguardar aceitar|ensino/Facebook/a3.jpg",
+          ],
+        },
+
+        golpes: {
+          titulo: "🛡️ Prevenir golpes",
+          passos: [
+            "Desconfiar de links estranhos|ensino/Facebook/g1.jpg",
+            "Nunca passar códigos ou senhas|ensino/Facebook/g2.jpg",
+            "Bloquear perfil suspeito|ensino/Facebook/g3.jpg",
+          ],
+        },
+      };
+    </script>
+
+    <!-- Script global -->
+    <script src="global.js"></script>
+    <script src="noturn.js"></script>
+  </body>
 </html>

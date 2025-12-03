@@ -1,14 +1,18 @@
 /* ===============================
       TEMAS (apenas variáveis)
 ================================*/
-
+.icone {
+  fill: red; /* Muda a cor do interior */
+  stroke: blue; /* Muda a cor da linha/borda */
+  stroke-width: 2px;
+}
 :root {
   /* Tema padrão (WhatsApp) */
   --f: url(Imagens/image.png);
   --bg: rgb(0, 198, 43);
   --header-bg: rgb(53, 143, 65);
   --img: brightness(0);
-
+  --bg1: color-mix(in srgb, var(--bg) 70%, white 30%);
   --cell-bg: rgb(62, 184, 79);
   --cell-dark-bg: rgb(5, 80, 32);
   --text: #000;
@@ -17,17 +21,21 @@
   --tutorial-bg: #cdffdb70;
   --button-bg: #003470;
   /* Dark */
-  --bg-dark: #0d0238;
-  --header-bg-dark: #018534c5;
+  --gr2-dark: #0d0238;
+  --header-gr2-dark: #018534c5;
   --cell-dark-bg: rgb(5, 80, 32);
   --text-dark: #fff;
-  --bg-dark-image: url(Imagens/image2.png);
+  --bg--dark-image: url(Imagens/image2.png);
+  --gr1-dark: rgb(62, 184, 79);
+  --bg1: color-mix(in srgb, var(--bg) 70%, white 30%);
+  --bg2: color-mix(in srgb, var(--bg) 70%, rgb(0, 0, 0) 30%);
 }
 
 /* Tema Facebook */
 .theme-facebook {
   --f: url(Imagens/fundo1-2.png);
-
+  --bg1: color-mix(in srgb, var(--bg) 70%, white 30%);
+  --bg2: color-mix(in srgb, var(--bg) 70%, rgb(0, 0, 0) 30%);
   --bg: #1877f2;
   --header-bg: #145dbf;
   --cell-bg: #3b76e3;
@@ -38,36 +46,67 @@
   --tutorial-bg: #aec9ff70;
   --button-bg: #0d2a67;
   /* Dark */
-  --bg-dark: #0c152f;
-  --header-bg-dark: #0a1a44;
+  --gr2-dark: #0c152f;
+  --header-gr2-dark: #0a1a44;
   --cell-dark-bg: #101c46;
   --text-dark: #fff;
-  --bg-dark-image: url(Imagens/fundo2-2.png);
+  --bg--dark-image: url(Imagens/fundo2-2.png);
+  --gr1-dark: #3b76e3;
+}
+
+.theme-pix {
+  --f: url(Imagens/image.png);
+  --bf: hue-rotate(60deg) grayscale(0.2) brightness(1);
+  --bg1: color-mix(in srgb, var(--bg) 70%, white 30%);
+  --bg2: color-mix(in srgb, var(--bg) 70%, rgb(0, 0, 0) 30%);
+  --bg: #18f2ad;
+  --header-bg: #14bf97;
+  --cell-bg: #3be3c4;
+  --cell-dark-bg: #0d674c;
+  --text: #fff;
+  --text-light: #fff;
+  --border-color: #0a473e;
+  --tutorial-bg: #aeffe970;
+  --button-bg: #0d675b;
+
+  /* Dark */
+  --gr2-dark: #0c2f27;
+  --darkbf: brightness(0.3) grayscale(0.5) hue-rotate(-20deg);
+  --header-gr2-dark: #168a71;
+  --cell-dark-bg: #104640;
+  --text-dark: #fff;
+  --bg--dark-image: url(Imagens/fundo1-2.png);
+  --gr1-dark: #3be3c4;
 }
 
 /* Tema Uber */
 .theme-uber {
   --f: url(Imagens/image.png);
-  --bf: grayscale(1) brightness(0.5);
+  --bf: grayscale(1) brightness(1);
   --bg: #000;
-  --cell-bg: #424242;
-  --cell-dark-bg: #111;
+  --bg1: color-mix(in srgb, var(--cell-bg) 70%, white 30%);
+  --bg2: color-mix(in srgb, var(--cell-bg) 70%, rgb(0, 0, 0) 30%);
+  --header-bg: #c1c1c1;
+  --cell-bg: #8e8e8e;
   --text: #fff;
   --text-light: #fff;
   --border-color: #333333;
   --tutorial-bg: #ffffff20;
   --button-bg: #444;
   /* Dark */
-  --bg-dark: #000;
-  --header-bg-dark: #171c618c;
+  --gr1-dark: #2a2a2a;
+  --gr2-dark: #000;
+  --header-gr2-dark: #222222;
   --cell-dark-bg: #000000;
   --text-dark: #fff;
-  --bg-dark-image: url(Imagens/image2.png);
+  --darkbf: grayscale(1);
+  --bg--dark-image: url(Imagens/image2.png);
 }
 .theme-internet {
+  --bg1: color-mix(in srgb, var(--bg) 70%, white 30%);
+  --bg2: color-mix(in srgb, var(--bg) 70%, rgb(0, 0, 0) 30%);
   --f: url(Imagens/fundo1-4.png);
   --cell-dark-bg: #104616;
-
   --bg: #f21818;
   --header-bg: #bf1414;
   --cell-bg: #ca0e0e;
@@ -78,11 +117,12 @@
   --tutorial-bg: #ffaeae70;
   --button-bg: #670d0d;
   /* Dark */
-  --bg-dark: #2f0c0c;
-  --header-bg-dark: #440a0a;
+  --gr1-dark: #670d0d;
+  --gr2-dark: #2f0c0c;
+  --header-gr2-dark: #440a0a;
   --cell-dark-bg: #461010;
   --text-dark: #fff;
-  --bg-dark-image: url(Imagens/fundo2-4.png);
+  --bg--dark-image: url(Imagens/fundo2-4.png);
 }
 
 /* ============================================
@@ -103,7 +143,7 @@ li img {
   width: 70%;
   height: 80%;
   border-radius: 5vw;
-  border: var(--border-color) solid 5px;
+  border: var(--border-color) solid 15px;
 }
 
 .conteudo {
@@ -161,7 +201,8 @@ li img {
 
   transition: 0.3s;
   outline: #000 solid 4px;
-  border: solid 5px white;
+  border: solid 5px;
+  border-color: var(--bg1) var(--bg2) var(--bg2) var(--bg1);
   background: linear-gradient(225deg, rgba(255, 255, 255, 0.5), #00000000);
   background-color: var(--cell-bg);
   display: flex;
@@ -185,18 +226,6 @@ header img {
   background-color: #00000000;
   filter: contrast(1.3);
   user-select: none;
-}
-
-#fundo {
-  background-image: var(--f);
-  filter: var(--bf);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  position: fixed;
-  z-index: -1000;
-  background-repeat: no-repeat;
-  transition: background 1s;
 }
 
 .logo {
@@ -280,23 +309,60 @@ header {
   opacity: 1;
   transform: translateX(175%);
 }
+#fundo {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
+}
 
-/* =============================
-      MODO DARK (igual antes)
-============================= */
+/* Imagem clara */
+#fundo::before,
+#fundo::after {
+  content: "";
+  position: absolute;
 
-body.dark #fundo {
-  transition: background 0.5s;
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
+  filter: var(--bf);
+}
 
-  background-image: var(--bg-dark-image);
+/* Imagem padrão (modo claro) */
+#fundo::before {
+  background-image: var(--f);
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Imagem do modo escuro */
+#fundo::after {
+  background-image: var(--bg--dark-image);
+  filter: var(--darkbf);
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Quando ativar o dark, a de cima aparece */
+body.dark #fundo::after {
+  opacity: 1;
+}
+#fundo img {
+  width: 100%;
+  min-width: 996px;
 }
 
 body.dark header {
-  background-color: var(--header-bg-dark);
+  background-color: var(--header-gr2-dark);
 }
 
 body.dark {
-  background-color: var(--bg-dark);
+  background-color: var(--gr2-dark);
 }
 
 body.dark .conteudo {
@@ -309,7 +375,7 @@ body.dark .cell img {
 }
 
 body.dark .cell {
-  background: linear-gradient(45deg, var(--cell-bg), var(--cell-dark-bg));
+  background: linear-gradient(45deg, var(--gr1-dark), var(--cell-dark-bg));
 }
 
 body.dark #tutorial {

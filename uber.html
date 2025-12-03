@@ -15,22 +15,64 @@
 
       <label for="toggle" class="button"></label>
     </header>
-  <div id="fundo"></div>
-    <div class="conteudo">
-      <div class="cell opcao" data-acao="foto">  <div>Mandar fotos ou vídeos</div>
-  <img src="ensino/Whatsapp/image3.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="videochamada">  <div>Fazer ligação de video</div>
-  <img src="ensino/Whatsapp/image2.png" alt="">
-</div>
-      <div class="cell opcao" data-acao="voz">  <div>Fazer ligação de voz</div>
-  <img src="ensino/Whatsapp/image.png" alt="">
-</div>
-  </div>
-  <div id="tutorial" style="display:none"></div>
+<div id="fundo"></div>
 
-  
-  
+<div class="conteudo">
+
+  <div class="cell opcao" data-acao="pedir">
+    <div>Pedir Uber</div>
+    <img src="ensino/uber/image.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="destino">
+    <div>Mudar destino</div>
+    <img src="ensino/uber/image2.png" alt="" />
+  </div>
+
+  <div class="cell opcao" data-acao="avaliar">
+    <div>Avaliar motorista</div>
+    <img src="ensino/uber/image3.png" alt="" />
+  </div>
+
+</div>
+
+<div id="tutorial" style="display: none"></div>
+
+<script>
+  const tutoriais = {
+
+    pedir: {
+      titulo: "🚗 Pedir Uber",
+      passos: [
+        "Abrir o app|ensino/Uber/u1.jpg",
+        "Confirmar local|ensino/Uber/u2.jpg",
+        "Escolher destino|ensino/Uber/u3.jpg",
+        "Selecionar corrida|ensino/Uber/u4.jpg",
+        "Confirmar|ensino/Uber/u5.jpg",
+      ],
+    },
+
+    destino: {
+      titulo: "📍 Mudar destino",
+      passos: [
+        "Tocar no destino atual|ensino/Uber/m1.jpg",
+        "Digitar novo endereço|ensino/Uber/m2.jpg",
+        "Confirmar|ensino/Uber/m3.jpg",
+      ],
+    },
+
+    avaliar: {
+      titulo: "⭐ Avaliar motorista",
+      passos: [
+        "Abrir o Uber|ensino/Uber/a1.jpg",
+        "Escolher estrelas|ensino/Uber/a2.jpg",
+        "Enviar|ensino/Uber/a3.jpg",
+      ],
+    },
+
+  };
+</script>
+
   <script src="noturn.js"></script>
-<script src="script2.js"></script></body>
+<script src="global.js"></script></body>
 </html>
