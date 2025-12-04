@@ -13,7 +13,7 @@ function carregarTutorial(acao) {
     html += `<li>${texto} <img src="${img}" alt=""></li>`;
   });
 
-  html += `</ul><button onclick="voltar()">🔙 Voltar</button>`;
+  html += `</ul><button onclick="voltar()">Voltar</button>`;
 
   conteudo.style.display = "none";
   tutorial.style.display = "block";

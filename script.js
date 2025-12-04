@@ -54,9 +54,10 @@ function mostrarTelefones() {
   setTimeout(() => {
     document.getElementById("principal").style.display = "none";
 
-    document.getElementById("SOS").style.display = "block";
+    document.getElementById("SOS").style.cssText = "display: block;";
   }, 300);
 }
+
 function voltar() {
   setTimeout(() => {
     document.getElementById("principal").style.display = "block";

@@ -40,7 +40,7 @@
   --header-bg: #145dbf;
   --cell-bg: #3b76e3;
   --cell-dark-bg: #0d2a67;
-  --text: #fff;
+  --text: #000;
   --text-light: #fff;
   --border-color: #0a1c47;
   --tutorial-bg: #aec9ff70;
@@ -63,7 +63,7 @@
   --header-bg: #14bf97;
   --cell-bg: #3be3c4;
   --cell-dark-bg: #0d674c;
-  --text: #fff;
+  --text: #000;
   --text-light: #fff;
   --border-color: #0a473e;
   --tutorial-bg: #aeffe970;
@@ -88,7 +88,7 @@
   --bg2: color-mix(in srgb, var(--cell-bg) 70%, rgb(0, 0, 0) 30%);
   --header-bg: #c1c1c1;
   --cell-bg: #8e8e8e;
-  --text: #fff;
+  --text: #000;
   --text-light: #fff;
   --border-color: #333333;
   --tutorial-bg: #ffffff20;
@@ -111,7 +111,7 @@
   --header-bg: #bf1414;
   --cell-bg: #ca0e0e;
   --cell-dark-bg: #670d0d;
-  --text: #fff;
+  --text: #000;
   --text-light: #fff;
   --border-color: #470a0a;
   --tutorial-bg: #ffaeae70;
@@ -236,7 +236,21 @@ header img {
   align-items: center;
   align-content: center;
 }
-
+.org {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+}
+.org a {
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 2vmax;
+  transition: 0.3s;
+  text-decoration: none;
+}
 header {
   filter: contrast(1.3);
   align-items: center;
@@ -251,7 +265,7 @@ header {
   z-index: 100000;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 30%;
+  column-gap: 0%;
 }
 
 #toggle {
@@ -382,6 +396,9 @@ body.dark #tutorial {
   color: var(--text-dark);
 }
 
+body.dark .org a {
+  color: var(--text-dark);
+}
 /* =============================
       TUTORIAL
 ============================= */

@@ -222,7 +222,6 @@ header {
   text-align: center;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
-
   width: 100vw;
   height: 100vh;
 }
@@ -234,6 +233,7 @@ body.dark #SOS {
   color: #ff0000;
   font-size: 2em;
   margin-top: 30vh;
+  transition: 1s;
 }
 body.dark #SOS h1 {
   color: #ff4444;
@@ -242,6 +242,7 @@ body.dark #SOS h1 {
   font-size: 1.5em;
   margin: 20px 0;
 }
+
 #voltar {
   background-color: #00bfff;
   color: white;
