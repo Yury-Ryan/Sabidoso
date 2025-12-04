@@ -176,6 +176,10 @@ li img {
   min-width: 100px;
   filter: var(--img);
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cell a {
@@ -190,6 +194,10 @@ li img {
   justify-items: center;
   align-content: center;
   justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .cell {
@@ -221,6 +229,7 @@ li img {
 header img {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-drag: none;
+
   height: 5vw;
   min-height: 50px;
   background-color: #00000000;
@@ -389,7 +398,8 @@ body.dark .cell img {
 }
 
 body.dark .cell {
-  background: linear-gradient(45deg, var(--gr1-dark), var(--cell-dark-bg));
+  background: linear-gradient(45deg, var(--gr1-dark), #0000);
+  background-color: var(--cell-dark-bg);
 }
 
 body.dark #tutorial {
@@ -440,4 +450,41 @@ li {
   font-size: 3vmax;
   display: grid;
   flex-direction: column;
+}
+
+.org a:hover {
+  color: color-mix(in srgb, rgb(255, 255, 255) 60%, var(--cell-bg) 40%);
+}
+.org a:active {
+  color: white;
+}
+
+body.dark .org a:hover {
+  color: var(--cell-bg);
+}
+
+.cell:hover,
+body.dark .cell:hover {
+  background-color: color-mix(
+    in srgb,
+    rgb(255, 255, 255) 50%,
+    var(--cell-bg) 50%
+  );
+  scale: 1.02;
+}
+
+.cell:active {
+  transition: none;
+  background-color: white;
+  scale: 1.05;
+}
+body.dark .cell:active {
+  background: rgba(255, 255, 255, 0.467);
+  transition: none;
+  background-color: color-mix(
+    in srgb,
+    rgb(255, 255, 255) 70%,
+    var(--cell-bg) 30%
+  );
+  scale: 1.05;
 }
