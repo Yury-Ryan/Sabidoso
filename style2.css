@@ -251,6 +251,10 @@ header img {
   column-gap: 10%;
 }
 .org a {
+  user-select: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   align-items: center;
   justify-items: center;
   align-content: center;

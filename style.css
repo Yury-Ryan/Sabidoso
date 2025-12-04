@@ -149,6 +149,11 @@ body {
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media (hover: hover) and (pointer: coarse) {
@@ -200,6 +205,12 @@ header img {
   padding-inline: 3vw;
   align-items: center;
   align-content: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header {
