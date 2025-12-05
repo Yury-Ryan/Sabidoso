@@ -34,6 +34,7 @@ function começar() {
   setTimeout(() => {
     document.getElementById("titulo").style.display = "none";
     document.querySelector(".subt").style.display = "none";
+    document.querySelector("#fundo").style.display = "none";
   }, 3000);
 
   // Liberar tela principal
